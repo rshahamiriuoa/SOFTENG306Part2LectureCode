@@ -29,34 +29,6 @@ title __COMPANY's Class Diagram__\n
   
 
   namespace com.company {
-    interface com.company.IFinance {
-        {abstract} + generatePaySlip()
-    }
-  }
-  
-
-  namespace com.company {
-    interface com.company.IHumanResources {
-        {abstract} + getHourlyRate()
-    }
-  }
-  
-
-  namespace com.company {
-    interface com.company.IOperations {
-        {abstract} + getHoursWorked()
-    }
-  }
-  
-
-  namespace com.company {
-    interface com.company.ITechnologyServices {
-        {abstract} + storePayslip()
-    }
-  }
-  
-
-  namespace com.company {
     class com.company.Main {
         {static} - employee : Employee
         {static} + main()
@@ -91,15 +63,11 @@ title __COMPANY's Class Diagram__\n
   }
   
 
-  com.company.Employee o-- com.company.IFinance : CFO
-  com.company.Employee o-- com.company.IOperations : COO
-  com.company.Employee o-- com.company.IHumanResources : HR
-  com.company.Finance .up.|> com.company.IFinance
-  com.company.Finance o-- com.company.ITechnologyServices : CTO
+  com.company.Employee o-- com.company.Finance : CFO
+  com.company.Employee o-- com.company.Operations : COO
+  com.company.Employee o-- com.company.HumanResources : HR
+  com.company.Finance o-- com.company.TechnologyServices : CTO
   com.company.Finance o-- com.company.Payslip : payslip
-  com.company.HumanResources .up.|> com.company.IHumanResources
-  com.company.Operations .up.|> com.company.IOperations
-  com.company.TechnologyServices .up.|> com.company.ITechnologyServices
 
 
 right footer
