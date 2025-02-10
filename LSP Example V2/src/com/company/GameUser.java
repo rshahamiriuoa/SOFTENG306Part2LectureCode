@@ -1,11 +1,9 @@
 package com.company;
 
-public class GameUser
-{
+public class GameUser {
     IBird character;
 
-    public GameUser(int characterCode)
-    {
+    public GameUser(int characterCode) {
         switch (characterCode) {
             case 1:
                 character = new Eagle();
@@ -25,17 +23,8 @@ public class GameUser
         }
     }
 
-    public void move()
-    {
-        try {
-            character.walk();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        try {
-            character.fly();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
+    public void move() {
+        character.fly();
+        character.walk();
     }
 }

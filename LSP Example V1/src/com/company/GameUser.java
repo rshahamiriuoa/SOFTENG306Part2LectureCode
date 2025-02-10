@@ -24,11 +24,6 @@ public class GameUser
 
     public void move()
     {
-
-        try {
             character.fly();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
     }
 }
